@@ -1,0 +1,125 @@
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    margin:0;
+    padding:0;
+    overflow: hidden;
+  }
+  
+
+  h1{
+   color: aliceblue !important;
+   font-size: 7rem !important; 
+   line-height: 90px !important;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+  }
+  h4{
+    color: aliceblue !important;
+    line-height: 30px !important;
+    font-size: 1rem !important;
+    margin-left: 4rem !important;
+  }
+
+
+
+
+
+  .bg_container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../Assets/Startpage_Elements/Startpage_Background.jpg");
+    background-repeat: no-repeat;
+    background-position: 00px, 0px;
+    background-size: 110vw;
+    margin: 0px;
+    position: fixed;
+    
+  }
+
+.graph_element_X{
+    max-width: 50px; /* set the maximum width to 300 pixels */
+    height: auto; /* maintain aspect ratio */
+    position:fixed;
+    left: 3%;
+    top: 10%;
+    pointer-events: auto;    
+
+}
+.graph_element_Square{
+    max-width: 100px; /* set the maximum width to 300 pixels */
+    height: auto; /* maintain aspect ratio */
+    position:fixed;
+    left: 40%;
+    top: 10%;
+    pointer-events: auto;
+
+}
+.graph_element_Tiangle{
+    max-width: 100px; /* set the maximum width to 300 pixels */
+    height: auto; /* maintain aspect ratio */
+    position:fixed;
+    left: 50%;
+    top: 80%;
+    pointer-events: auto;
+
+}
+
+.graph_element_Circle{
+    max-width: 100px; /* set the maximum width to 300 pixels */
+    height: auto; /* maintain aspect ratio */
+    position:fixed;
+    left: 80%;
+    top: -5%;
+    pointer-events: auto;
+
+}
+
+.graph_element_Michael_A{
+    max-width: 800px; /* set the maximum width to 300 pixels */
+    height: auto; /* maintain aspect ratio */
+    position:fixed;
+    right: -10%;
+    bottom: -25%;
+    pointer-events: none;
+}
+
+.avoid_mouse {
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  
+  .avoid_mouse.move {
+    transform: translate3d(var(--offset-x), var(--offset-y), 0);
+  }
+
+ 
+  
+.graph_element_Cubeformation{
+    max-width: 800px; /* set the maximum width to 300 pixels */
+    height: auto; /* maintain aspect ratio */
+    position:fixed;
+    right: 20%;
+    top: -35%;
+    pointer-events: none;
+}
+
+.graph_element_dots{
+    max-width: 800px; /* set the maximum width to 300 pixels */
+    height: auto; /* maintain aspect ratio */
+    position:fixed;
+    left: 10%;
+    bottom: -25%;
+    pointer-events: none;
+}
+
+.graph_element_Graphic{
+    max-width: 800px; /* set the maximum width to 300 pixels */
+    height: auto; /* maintain aspect ratio */
+    pointer-events: none;
+}
+
+.hello_text{
+    position: fixed;
+    left: 10%;
+    top:25%
+}
