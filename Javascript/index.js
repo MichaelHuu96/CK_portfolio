@@ -1,18 +1,23 @@
 var container = document.querySelector(".bg_container");
+var helloText = document.querySelector(".hello_text");
+var cubeformation = document.querySelector(".graph_element_Cubeformation");
+var michael = document.querySelector(".graph_element_Michael_A");
+const elements = document.querySelectorAll('.avoid_mouse');
 
 
-container.onmousemove = e => {
-  container.style.backgroundPositionX = -e.offsetX * 0.02 + "px";
-  container.style.backgroundPositionY = -e.offsetY * 0.03 + "px";
+
+
+document.onmousemove = e => {
+  container.style.backgroundPositionX = -e.clientX * 0.04 + "px";
+  container.style.backgroundPositionY = -e.clientY * 0.05 + "px";
+  helloText.style.transform = "translateX(" + (-e.clientX * 0.01) + "px) translateY(" + (-e.clientY * 0.02) + "px)";
+  cubeformation.style.transform = "translateX(" + (-e.clientX * 0.025) + "px) translateY(" + (-e.clientY * 0.02) + "px)";
+  michael.style.transform = "translateX(" + (-e.clientX * 0.025) + "px) translateY(" + (-e.clientY * 0.02) + "px)";
+
 }
 
 
 
-
-
-
-
-const elements = document.querySelectorAll('.avoid_mouse');
 
 elements.forEach((element) => {
   element.addEventListener('mousemove', (e) => {
