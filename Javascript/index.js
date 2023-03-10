@@ -1,22 +1,34 @@
 var container = document.querySelector(".bg_container");
-var helloText = document.querySelector(".hello_text");
+
 var cubeformation = document.querySelector(".graph_element_Cubeformation");
 var michael = document.querySelector(".graph_element_Michael_A");
+
 const elements = document.querySelectorAll('.avoid_mouse');
-
-
+const cursor_perspectives = document.querySelectorAll(".cursor_perspective");
+const cursor_perspectives_high = document.querySelectorAll(".cursor_perspective_high");
+const cursor_perspectives_bg = document.querySelectorAll(".cursor_perspective_bg");
 
 
 document.onmousemove = e => {
   container.style.backgroundPositionX = -e.clientX * 0.04 + "px";
   container.style.backgroundPositionY = -e.clientY * 0.05 + "px";
-  helloText.style.transform = "translateX(" + (-e.clientX * 0.01) + "px) translateY(" + (-e.clientY * 0.02) + "px)";
+
   cubeformation.style.transform = "translateX(" + (-e.clientX * 0.025) + "px) translateY(" + (-e.clientY * 0.02) + "px)";
   michael.style.transform = "translateX(" + (-e.clientX * 0.025) + "px) translateY(" + (-e.clientY * 0.02) + "px)";
 
+
+  for (var i = 0; i < cursor_perspectives.length; i++) {
+    cursor_perspectives[i].style.transform = "translateX(" + (-e.clientX * 0.002) + "px) translateY(" + (-e.clientY * 0.02) + "px)";
+  }
+
+  for (var i = 0; i < cursor_perspectives_high.length; i++) {
+    cursor_perspectives_high[i].style.transform = "translateX(" + (-e.clientX * 0.008) + "px) translateY(" + (-e.clientY * 0.02) + "px)";
+  }  
+  for (var i = 0; i < cursor_perspectives_bg.length; i++) {
+    cursor_perspectives_bg[i].style.transform = "translateX(" + (-e.clientX * 0.025) + "px) translateY(" + (-e.clientY * 0.02) + "px)";
+  }
+  
 }
-
-
 
 
 elements.forEach((element) => {

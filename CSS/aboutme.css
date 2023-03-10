@@ -1,0 +1,140 @@
+#Section_AboutMe{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+
+  }
+
+.cursor_perspective_bg{
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 110vw;
+    position: absolute;
+}
+.about_me_bg{
+    background-image: url("../Assets/About_me/About_Me_Background_B.jpg");
+    width: 120vw;
+    height: 120vh;
+}
+
+.graph_element_Planet_A{
+    max-width: 220px;
+    left: -30px;
+    top: -30px;
+    position: absolute;
+}
+.graph_element_Planet_B{
+    max-width: 100px;
+    left: 500px;
+    top: 190px;
+    position: absolute;
+}
+.graph_element_Planet_C{
+    max-width: 60px;
+    left: 230px;
+    top: 290px;
+    position: absolute;
+}
+
+.graph_element_Hands{
+    max-width: 800px;
+    left: -300px;
+    bottom: -320px;
+    position: absolute;
+
+}
+.graph_element_Legs{
+    max-width: 600px;
+    left: 500px;
+    top: -100px;
+    position: absolute;
+}
+
+.aboutme_Text{
+    position: absolute;
+    width: 500px;
+    top: 300px;
+    left: 300px;
+    color: aliceblue;
+    
+}
+
+.graph_element_Square{
+    max-width: 50px;
+    left: 100px;
+    top: 400px;
+    position: absolute;
+}
+
+.graph_element_Triangle{
+    max-width: 50px;
+    left: 800px;
+    top: 600px;
+    position: absolute;
+}
+.graph_element_Circle{
+    max-width: 60px;
+    left: 800px;
+    bottom: 80px;
+    position: absolute;
+}
+
+.graph_element_X{
+    max-width: 40px;
+    left: 600px;
+    bottom: 200px;
+    position: absolute;
+}
+
+#myCanvas{
+    position: absolute;
+     margin: auto;
+     padding: 100px;
+     right: 2%;
+     top: auto;
+     width: 1000px;
+     
+   }
+
+   .cloudlogo {
+    width: 120px;
+    border-radius: 50%;
+  }
+
+.avoid_mouse {
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  
+.avoid_mouse.move {
+    transform: translate3d(var(--offset-x), var(--offset-y), 0);
+  }
+  
+
+
+
+  @keyframes float {
+	0% {
+
+		transform: translatey(0px);
+	}
+	50% {
+
+		transform: translatey(-20px);
+	}
+	100% {
+
+		transform: translatey(0px);
+	}
+}
+
+
+.float_effect {
+	box-sizing: border-box;
+	overflow: hidden;
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+}
+
+
