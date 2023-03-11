@@ -1,0 +1,105 @@
+#section_contact_me{
+    position: relative;
+    overflow: hidden;
+  
+  }
+
+  .contact_me_bg{
+    background-image: url("../Assets/Contact/Contact\ Background\ B.jpg");
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    overflow: hidden;
+  }
+
+
+
+.graph_element_AlarmClock{
+    max-width: 300px;
+    left: 0px;
+    bottom: 20px;
+    position: absolute;
+}
+
+
+.graph_element_Axelot{
+  max-width: 100px;
+  left: 800px;
+  top: 80px;
+  position: absolute;
+}
+
+
+.graph_element_Astronaut{
+    max-width: 400px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+  }
+
+  .graph_element_Apartment{
+    max-width: 100px;
+    right: 240px;
+    top: 90px;
+    position: absolute;
+  }
+  .contact_me_section{
+    max-width: 800px;
+    left: 240px;
+    top: 200px;
+    position: absolute;
+  }
+
+.text_section{
+    color: aliceblue;
+    
+}
+
+.form_section {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.form_section input {
+    flex: 1;
+    margin: 5px;
+    border-radius: 0;
+    outline: none;
+    color:slategrey;
+}
+
+.form_section #Input_subject {
+    flex-basis: 100%;
+    margin-top: 10px;
+    margin: 5px;
+    border-radius: 0;
+    outline: none;
+    color:slategrey;
+}
+
+#TextArea_Message{
+    margin: 5px;
+    border-radius: 0;
+    resize: none;
+    color:slategrey;
+    height: 230px;
+
+}
+
+.form-control:focus {
+    border-color: none;
+    box-shadow: none;
+  }
+
+.btn_send_message{
+    margin: 5px;
+    border-radius: 0;
+    right: 0px;
+    color:slategrey;
+    margin-left: auto;
+
+}

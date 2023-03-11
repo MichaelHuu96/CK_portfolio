@@ -1,22 +1,22 @@
 #Section_Cases{
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    overflow: hidden;
 
-}
-
+  }
+  
 .about_me_content{
-top: 50%;
-left: 50%;
+  top: 50%;
+  left: 50%;
 }
 .cases_bg{
-  background-image: url("../Assets/Cases/Cases_Background_B.jpg");
-  width: 120vw;
-  height: 120vh;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  position: absolute;
-  overflow: hidden;
+    background-image: url("../Assets/Cases/Cases_Background_B.jpg");
+    width: 120vw;
+    height: 120vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    overflow: hidden;
 
 }
 
@@ -27,57 +27,31 @@ padding: 5%;
 }
 
 .case_text {
-position: absolute;
-top: 35%;
-left: 15%;
+  position: absolute;
+  top: 35%;
+  left: 15%;
 
 }
 
 .case_text h2{
-color: aliceblue;
-font-size: 4rem ;
+  color: aliceblue;
+  font-size: 4rem ;
 }
 
-.case_grid {
-display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
-position: absolute;
-width: 840px;
-margin-bottom: 2%;
-
-}
-
-.image_container {
-padding: 0px;
-height: 400px;
-width: 400px;
-margin: 10px;
-overflow: hidden;
-}
-
-.case_image {
-
-height: 100%;
-width: 120%;
-object-fit: cover;
-}
-
-
-@media only screen and (max-width: 1680px) {
 .case_grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   position: absolute;
-  width: 640px;
+  width: 840px;
   margin-bottom: 2%;
+  
 }
 
 .image_container {
 padding: 0px;
-  height: 300px;
-  width: 300px;
+  height: 400px;
+  width: 400px;
   margin: 10px;
   overflow: hidden;
 }
@@ -88,22 +62,48 @@ padding: 0px;
   width: 120%;
   object-fit: cover;
 }
+
+
+@media only screen and (max-width: 1680px) {
+  .case_grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: absolute;
+    width: 640px;
+    margin-bottom: 2%;
+  }
+  
+  .image_container {
+  padding: 0px;
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+    overflow: hidden;
+  }
+  
+  .case_image {
+  
+    height: 100%;
+    width: 120%;
+    object-fit: cover;
+  }
 }
 
 .graph_element_Building{
-max-width: 800px;
-left: -200px;
-bottom: -420px;
-position: absolute;
+  max-width: 800px;
+  left: -200px;
+  bottom: -420px;
+  position: absolute;
 }
 .zoom {
-transition: transform .2s; /* Animation */
-margin: 0px;
-overflow: hidden;
+  transition: transform .2s; /* Animation */
+  margin: 0px;
+  overflow: hidden;
 
 }
 
 .zoom:hover {
-transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-overflow: hidden;
+  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  overflow: hidden;
 }
