@@ -2,12 +2,13 @@
     width: 100vw;
     height: 100vh;
     position: relative;
+    overflow:hidden;
 
   }
 
 .cursor_perspective_bg{
-    width: 100vw;
-    height: 100vh;
+    width: 120vw;
+    height: 120vh;
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: 110vw;
@@ -52,14 +53,7 @@
     position: absolute;
 }
 
-.aboutme_Text{
-    position: absolute;
-    width: 500px;
-    top: 300px;
-    left: 300px;
-    color: aliceblue;
-    
-}
+
 
 .graph_element_Square{
     max-width: 50px;
@@ -89,19 +83,23 @@
 }
 
 #myCanvas{
-    position: absolute;
-     margin: auto;
-     padding: 100px;
-     right: 2%;
-     top: auto;
-     width: 1000px;
-     
+    position: relative;
+    bottom: 60px;
+    overflow-y: hidden;
+    overflow-x: auto;
    }
 
-   .cloudlogo {
-    width: 120px;
-    border-radius: 50%;
+
+
+    /* Define a class to crop images */
+    .cloudlogo{
+    max-width: 300px; /* Width of the cropped image */
+    height: 200px; /* Height of the cropped image */
+    object-fit: cover;
   }
+  
+
+
 
 .avoid_mouse {
     transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -127,6 +125,7 @@
 
 		transform: translatey(0px);
 	}
+    
 }
 
 
@@ -136,5 +135,85 @@
 	transform: translatey(0px);
 	animation: float 6s ease-in-out infinite;
 }
+  
+.about_me_text {
+    height: auto;
+    max-width: 700px;
+    color: aliceblue;
+    margin:8%;
+    margin-bottom: 0%;
 
 
+  }
+  @media only screen and (max-width: 1780px) {
+
+    #myCanvas{
+        height: 800px;
+        width: 750px;
+        margin:8%;
+    }
+  }
+
+  
+
+
+  .about_me_content{
+ width: 100vw;
+ height: 100vh;
+ background-color: yellow;
+ display: flex;
+ flex-wrap: wrap;
+ padding: 5%;
+
+  } 
+   @media only screen and (max-width: 600px) {
+    .about_me_content {
+      flex-direction: u;
+    }
+  
+
+    .about_me_cloud {
+      width: 100%;
+    }
+
+    #myCanvas{
+        height: 400px;
+        width: 400px;
+    }
+
+    #Section_AboutMe{
+        width: 100vw;
+        height: 600px;
+        position: relative;
+        overflow: hidden;
+      }
+  }
+  @media only screen and (max-width: 1680px) {
+    .about_me_content {
+      flex-direction:row;
+    }
+  
+
+    .about_me_cloud {
+      width: 100%;
+    }
+
+    #myCanvas{
+        height: 600px;
+        width: 600px;
+        margin-top: 14%;
+        margin-right: 8%;
+        margin-left: 0%;
+    }
+    .about_me_text{
+      margin-right:0% ;
+      width: 40%;
+    }
+
+    #Section_AboutMe{
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        overflow:hidden;
+      }
+  }
