@@ -1,4 +1,4 @@
-
+/* Blast effect code */
 .blast_container .text-zone {
   position: absolute;
   -webkit-transform: translateY(-50%);
@@ -52,3 +52,4 @@
 .blast_container .blast:hover {
   color: #d8be68;
 }
+
