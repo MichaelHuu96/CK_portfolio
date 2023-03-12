@@ -81,7 +81,7 @@
 }
 
 #myCanvas{
-    position: relative;
+    position: absolute;
     bottom: 60px;
     overflow-y: hidden;
     overflow-x: auto;
@@ -140,6 +140,7 @@
     color: aliceblue;
     margin:8%;
     margin-bottom: 0%;
+    position: absolute;
 
 
   }

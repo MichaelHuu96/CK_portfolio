@@ -107,3 +107,11 @@ padding: 0px;
   transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   overflow: hidden;
 }
+.lift-up {
+  transition: transform 0.2s ease-out;
+}
+
+.lift-up:hover {
+  transform: translatey(-10px);
+  box-shadow: 10px 0 10px rgba(0, 0, 0, 0.2);
+}

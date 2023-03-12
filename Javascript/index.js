@@ -66,7 +66,7 @@ elements.forEach((element) => {
   });
 });
 
-/*   Move elements around so they stick
+
 
 elements.forEach((element) => {
   const easingFactor = 0.1;
@@ -132,68 +132,68 @@ elements.forEach((element) => {
 });
 
 
-
 /*   Move elements around so they stick
 
+
+
+elements.forEach((element) => {
+  const easingFactor = 0.1;
+  let rafId = null;
+  let offsetX = 0;
+  let offsetY = 0;
+
+  function animate() {
+    offsetX *= 1 - easingFactor;
+    offsetY *= 1 - easingFactor;
+    element.style.setProperty('--offset-x', `${offsetX}px`);
+    element.style.setProperty('--offset-y', `${offsetY}px`);
+    if (Math.abs(offsetX) > 0.1 || Math.abs(offsetY) > 0.1) {
+      rafId = requestAnimationFrame(animate);
+    } else {
+      element.classList.remove('move');
+    }
+  }
+
+  element.addEventListener('mousemove', (e) => {
+    const { left, top, width, height } = element.getBoundingClientRect();
+    const x = e.clientX - left;
+    const y = e.clientY - top;
+    offsetX = Math.max(-width, Math.min(width, (width / 2 - x) * 1));
+    offsetY = Math.max(-height, Math.min(height, (height / 2 - y) * 1));
+    element.classList.add('move');
+    if (!rafId) {
+      rafId = requestAnimationFrame(animate);
+    }
+  });
+
+  element.addEventListener('mouseleave', () => {
+    if (rafId) {
+      cancelAnimationFrame(rafId);
+      rafId = null;
+    }
+    offsetX = 0;
+    offsetY = 0;
+  });
+
+  element.addEventListener('touchmove', (e) => {
+    const { left, top, width, height } = element.getBoundingClientRect();
+    const x = e.touches[0].clientX - left;
+    const y = e.touches[0].clientY - top;
+    offsetX = Math.max(-width, Math.min(width, (width / 2 - x) * 1));
+    offsetY = Math.max(-height, Math.min(height, (height / 2 - y) * 1));
+    element.classList.add('move');
+    if (!rafId) {
+      rafId = requestAnimationFrame(animate);
+    }
+  });
+
+  element.addEventListener('touchend', () => {
+    if (rafId) {
+      cancelAnimationFrame(rafId);
+      rafId = null;
+    }
+    offsetX = 0;
+    offsetY = 0;
+  });
+});
 */
-
-elements.forEach((element) => {
-  const easingFactor = 0.1;
-  let rafId = null;
-  let offsetX = 0;
-  let offsetY = 0;
-
-  function animate() {
-    offsetX *= 1 - easingFactor;
-    offsetY *= 1 - easingFactor;
-    element.style.setProperty('--offset-x', `${offsetX}px`);
-    element.style.setProperty('--offset-y', `${offsetY}px`);
-    if (Math.abs(offsetX) > 0.1 || Math.abs(offsetY) > 0.1) {
-      rafId = requestAnimationFrame(animate);
-    } else {
-      element.classList.remove('move');
-    }
-  }
-
-  element.addEventListener('mousemove', (e) => {
-    const { left, top, width, height } = element.getBoundingClientRect();
-    const x = e.clientX - left;
-    const y = e.clientY - top;
-    offsetX = Math.max(-width, Math.min(width, (width / 2 - x) * 1));
-    offsetY = Math.max(-height, Math.min(height, (height / 2 - y) * 1));
-    element.classList.add('move');
-    if (!rafId) {
-      rafId = requestAnimationFrame(animate);
-    }
-  });
-
-  element.addEventListener('mouseleave', () => {
-    if (rafId) {
-      cancelAnimationFrame(rafId);
-      rafId = null;
-    }
-    offsetX = 0;
-    offsetY = 0;
-  });
-
-  element.addEventListener('touchmove', (e) => {
-    const { left, top, width, height } = element.getBoundingClientRect();
-    const x = e.touches[0].clientX - left;
-    const y = e.touches[0].clientY - top;
-    offsetX = Math.max(-width, Math.min(width, (width / 2 - x) * 1));
-    offsetY = Math.max(-height, Math.min(height, (height / 2 - y) * 1));
-    element.classList.add('move');
-    if (!rafId) {
-      rafId = requestAnimationFrame(animate);
-    }
-  });
-
-  element.addEventListener('touchend', () => {
-    if (rafId) {
-      cancelAnimationFrame(rafId);
-      rafId = null;
-    }
-    offsetX = 0;
-    offsetY = 0;
-  });
-});

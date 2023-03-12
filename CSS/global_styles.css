@@ -1,0 +1,54 @@
+
+.blast_container .text-zone {
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.blast_container .text-zone a {
+  font-weight: 300;
+}
+
+.blast_container h1::before {
+  font-family: "La Belle Aurore", cursive;
+  color: #10364e;
+
+  position: absolute;
+  margin-top: -35px;
+}
+.blast_container h1::after {
+  font-family: "La Belle Aurore", cursive;
+  color: #10364e;
+  position: absolute;
+  margin-top: 18px;
+  margin-left: 20px;
+  -webkit-animation: myanim2 1s 3s backwards;
+  animation: myanim2 1s 3s backwards;
+}
+
+.blast_container .flat-button {
+  color: #d8be68;
+  letter-spacing: 3px;
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+  padding: 6px 10px;
+  border: 1px solid #d8be68;
+  margin-top: 40px;
+  float: left;
+  border-radius: 4px;
+  opacity: 0;
+}
+.blast_container .flat-button:hover {
+  background: #d8be68;
+  color: #0b2535;
+}
+.blast_container .blast {
+  opacity: 0;
+  display: inline-block;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.blast_container .blast:hover {
+  color: #d8be68;
+}
