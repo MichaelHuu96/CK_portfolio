@@ -23,8 +23,6 @@ $(document).ready(function() {
     outlineOffset: 0,
     shadowOffset:"[0,2]",
     lock:"y",
-    
-    
   }, "tags")) {
     $("#myCanvasContainer").hide();
   }
